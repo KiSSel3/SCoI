@@ -24,7 +24,6 @@ def words_list(text:str):
 def average_amount_of_characters_in_sentence(text:str):
     amount_sentences = amount_of_sentences(text)
     words = words_list(text)
-    print(words)
     amount_characters_in_word = 0
 
     for word in words:
