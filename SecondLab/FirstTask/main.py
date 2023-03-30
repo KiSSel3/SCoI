@@ -1,8 +1,10 @@
 import utilities
 
 if(__name__ == "__main__"):
-    file = open('/home/kissel/Programming/SCoI/SecondLab/FirstTask/Text.txt')
-    text = file.read()
+    with open("/home/kissel/Programming/SCoI/SecondLab/FirstTask/Text.txt") as file:
+      text = file.read()
+
+    print(text)
 
     print(f'Amount of sentences: {utilities.amount_of_sentences(text)}')
     print(f"Amount of non-declarative sentences: {utilities.amount_of_non_declarative_sentences(text)}")

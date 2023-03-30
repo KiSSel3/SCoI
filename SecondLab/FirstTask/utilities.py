@@ -1,7 +1,7 @@
 import constants
 
+import collections
 import re
-
 
 def amount_of_sentences(text:str):
     sentences = re.findall(constants.SENTENCES_PATTERN, text)
@@ -17,15 +17,14 @@ def amount_of_non_declarative_sentences(text:str):
 
 
 def words_list(text:str):
-    all_words = re.findall(constants.WORDS_PATTERN, text)
-    words = [word for word in all_words if word not in range(10)]
-
+    words = re.findall(constants.WORDS_PATTERN, text)
     return words
 
 
-def average_amount_of_characters_in_sentence(text):
+def average_amount_of_characters_in_sentence(text:str):
     amount_sentences = amount_of_sentences(text)
     words = words_list(text)
+    print(words)
     amount_characters_in_word = 0
 
     for word in words:
@@ -36,7 +35,7 @@ def average_amount_of_characters_in_sentence(text):
     return 0
 
 
-def average_amount_of_characters_in_word(text):
+def average_amount_of_characters_in_word(text:str):
     words = words_list(text)
     amount_characters_in_word = 0
 
@@ -48,9 +47,9 @@ def average_amount_of_characters_in_word(text):
     return 0
 
 
-def top_grams(text:str, k = 10, n = 4):
+def top_grams(text:str, k:int = 10, n:int = 4):
     n_grams: dict[str, int] = {}
-    words = words_list(text)
+    words = [word.lower() for word in words_list(text)]
     for word_index in range(len(words) - int(n) + 1):
         n_gram = ' '.join(str(word) for word in words[word_index:word_index + int(n)])
         if n_gram in n_grams:
