@@ -1,0 +1,13 @@
+README.md
+setup.py
+Core/constans.py
+Core/serializer_functions.py
+MySerializer.egg-info/PKG-INFO
+MySerializer.egg-info/SOURCES.txt
+MySerializer.egg-info/dependency_links.txt
+MySerializer.egg-info/requires.txt
+MySerializer.egg-info/top_level.txt
+Serializers/Creator.py
+Serializers/JSONSerializer.py
+Serializers/XMLSerializator.py
+Serializers/cli_serializer.py
