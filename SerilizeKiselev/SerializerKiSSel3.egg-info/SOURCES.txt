@@ -1,0 +1,13 @@
+README.md
+setup.py
+SerializerKiSSel3.egg-info/PKG-INFO
+SerializerKiSSel3.egg-info/SOURCES.txt
+SerializerKiSSel3.egg-info/dependency_links.txt
+SerializerKiSSel3.egg-info/requires.txt
+SerializerKiSSel3.egg-info/top_level.txt
+SerilizerKiselev/Creator.py
+SerilizerKiselev/JSONSerializer.py
+SerilizerKiselev/XMLSerializator.py
+SerilizerKiselev/__init__.py
+SerilizerKiselev/constans.py
+SerilizerKiselev/serializer_functions.py

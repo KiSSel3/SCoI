@@ -1,7 +1,6 @@
-import sys
-sys.path.append("/home/kissel/Programming/SCoI/ThirdLab")
-from Serializers.JSONSerializer import JsonSerializer
-from Serializers.XMLSerializator import XMLSerializer
+
+from .JSONSerializer import JsonSerializer
+from .XMLSerializator import XMLSerializer
 
 class Creator:
     

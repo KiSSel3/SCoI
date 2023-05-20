@@ -1,4 +1,4 @@
-from Core.serializer_functions import serialize, deserialize
+from .serializer_functions import serialize, deserialize
 import regex
 
 class XMLSerializer:

@@ -1,7 +1,7 @@
 import re
 import inspect
 import types
-from Core.constans import CODE, BASE_TYPE, BASE_COLLECTION
+from .constans import CODE, BASE_TYPE, BASE_COLLECTION
 
 
 def serialize(obj):
