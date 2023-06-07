@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static%}
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <title>Edit</title>
+    </head>
+
+    <body>
+             <form action="{{ request.get_full_path }}" method="get">
+                <button class="btn btn-primary m-3" type="submit" name="sort" value="ascending">Сортировать по возрастанию</button>
+                <button class="btn btn-primary m-3" type="submit" name="sort" value="descending">Сортировать по убыванию</button>
+            </form>
+
+            <h5>{{ device.name }}</h5>>
+            <table class="table table-dark table-striped ">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th>Вид услуги</th> <th>цена</th> <th></th> <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                     {%for issue in issues%}
+                        <tr>
+                            <td>{{issue.issue_type}}</td> <td>{{issue.price}}</td>
+                            <td><a href="{% url 'services:editIssue' issue.id %}"><button class="btn btn-warning">изменить</button></a></td>
+                            {% if user.is_staff %}
+                            <td>
+                                <form action="{% url 'cart:cart_add' issue.id %}" method="post">
+                                    {{ cart_form }}
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-warning" value="Add to cart">
+                                </form>
+                            </td>
+                            {% endif %}
+
+
+                        </tr>
+                    {% empty %}
+                    <tr>Статей не обнаружено :(</tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+
+    </body>
+    </html>

@@ -1,0 +1,93 @@
+body{
+    background: #2c2c2c;
+}
+aside{
+
+    background: #181818;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    padding: 2%;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+aside h3{
+    margin-top:50px;
+    font-size: 25px;
+}
+
+aside ul {list-style: none;}
+
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+
+}
+
+main .features{
+    color: #fff;
+    float: left;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top:50px;
+}
+
+nav .a{
+    float: right;
+    text-color: #fff;
+}
+
+.order_info{
+     text-color: #fff;
+}
+
+table.cart{
+     text-color: #fff;
+}
+
+thead th, tbody tr.total {
+    background:#5993bb;
+    color:#fff;
+    font-weight:bold;
+}
+
+table th, table td {
+    text-align:left;
+    font-size:14px;
+    padding:10px;
+    margin:0;
+}
+
+tbody tr:nth-child(odd) {
+    background:#efefef;
+}
+tbody tr.subtotal {
+    background:#ccc;
+}
+
+td input[type="submit"] {
+    font-size:12px;
+    padding:4px 10px;
+}
+
+

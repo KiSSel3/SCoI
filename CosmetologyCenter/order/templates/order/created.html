@@ -1,0 +1,13 @@
+{% extends "services/layout.html"  %}
+{% load static%}
+
+{% block name %}Thank you{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Thank you</h1>
+        <p>Your order has been successfully completed. Your order number is
+            <strong>{{ order.id }}</strong>.</p>
+    </div>
+
+{% endblock %}

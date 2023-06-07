@@ -1,0 +1,63 @@
+{% extends "services/layout.html"  %}
+{% load static%}
+
+{% block name  %}
+    <h1>Косметический салон</h1>
+{% endblock  %}
+
+{% block content  %}
+<div class="row">
+    {% for devices in object_list%}
+  <div class="container">
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card-deck">
+             <div class="card m-3">
+
+            <div class="card-header">
+                <h5>{{devices.name}}</h5>
+            </div>
+
+            <div class="card-body">
+                 <a href="{{ devices.get_absolute_url }}">
+                    <img src="{% if devices.image %}{{ devices.image.url }}{%else %}{% static 'services/img/logo.jpg' %}{% endif %}"
+                    width="70" height="70">
+                 </a>
+            </div>
+            <div class="card-footer">
+                <a href=""><button class="btn btn-primary">Узнать подробнее</button></a>
+                <a href="{% url 'services:detail' devices.id %}"><button class="btn btn-warning">Подробнее</button></a>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+</div>
+       {% empty %}
+    <p>Статей не обнаружено :(</p>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+    <div class="features">
+        <h1>Главная страница</h1>
+        {% for devices in object_list%}
+        <h5>{{devices.name}}</h5>
+        <img src="{{devices.image}}">
+        {% empty %}
+        <p>Статей не обнаружено :(</p>
+        {% endfor %}
+    </div>
+
+
+{% endblock  %}
+
+
+{% block title  %}
+    <h1>Массаж к415</h1>
+{% endblock  %}
