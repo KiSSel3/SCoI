@@ -14,7 +14,7 @@ from .forms import UserCreateForm
 
 class RegisterFormView(FormView):
     form_class = UserCreateForm
-    success_url = ''
+    success_url = '/'
 
     template_name = 'register.html'
 

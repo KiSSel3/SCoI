@@ -8,11 +8,11 @@ class DeviceForm(forms.ModelForm):
         widgets = {
             "name": forms.TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'название устройства',
+                'placeholder': 'Номер кабинета',
             }),
             "image": forms.FileInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'картинка устройства'
+                'placeholder': 'Картинка кабинета'
             }),
 
         }
@@ -25,15 +25,15 @@ class IssueForm(forms.ModelForm):
         widgets = {
             "issue_type": forms.TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'название устройства',
+                'placeholder': 'Картинка кабинета',
             }),
             "price": forms.TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'название устройства',
+                'placeholder': 'Картинка кабинета',
             }),
             "device_type": forms.Select(attrs={
                 'class': 'form-control',
-                'placeholder': 'название устройства',
+                'placeholder': 'Картинка кабинета',
             }),
 
         }
